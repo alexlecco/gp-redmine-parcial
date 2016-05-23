@@ -5,5 +5,10 @@
   <%= @lineamiento.nombre %>
 </p>
 
+<%= link_to 'Crear Objetivo', new_objetivo_path %> <br />
+<%= link_to 'Listar Objetivos', objetivos_path %> <br />
+
+<br />
+
 <%= link_to 'Edit', edit_lineamiento_path(@lineamiento) %> |
 <%= link_to 'Back', lineamientos_path %>
