@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :accions
   resources :objetivos
   resources :lineamientos
   get 'welcome/index'

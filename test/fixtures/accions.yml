@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  porcentaje_realizado: 1
+  objetivo_id: 
+
+two:
+  nombre: MyString
+  porcentaje_realizado: 1
+  objetivo_id: 

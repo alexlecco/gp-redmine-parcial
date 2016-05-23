@@ -1,0 +1,28 @@
+<%= simple_form_for(@accion) do |f| %>
+  <% if @accion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@accion.errors.count, "error") %> prohibited this accion from being saved:</h2>
+
+      <ul>
+      <% @accion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :porcentaje_realizado %><br>
+    <%= f.number_field :porcentaje_realizado %>
+  </div>
+  <div class="field">
+    <%= f.input :objetivo_id, collection: Objetivo.all.collect { |p| [ p.nombre, p.id ] }, label: 'Objetivo'%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

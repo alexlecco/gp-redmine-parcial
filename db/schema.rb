@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160523145825) do
+ActiveRecord::Schema.define(version: 20160523163142) do
+
+  create_table "accions", force: :cascade do |t|
+    t.string   "nombre"
+    t.integer  "porcentaje_realizado"
+    t.integer  "objetivo_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "accions", ["objetivo_id"], name: "index_accions_on_objetivo_id"
 
   create_table "lineamientos", force: :cascade do |t|
     t.string   "nombre"

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @accion.nombre %>
+</p>
+
+<p>
+  <strong>Porcentaje realizado:</strong>
+  <%= @accion.porcentaje_realizado %>
+</p>
+
+<p>
+  <strong>Objetivo:</strong>
+  <%= @accion.objetivo %>
+</p>
+
+<%= link_to 'Edit', edit_accion_path(@accion) %> |
+<%= link_to 'Back', accions_path %>

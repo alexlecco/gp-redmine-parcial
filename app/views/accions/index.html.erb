@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Accions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Porcentaje realizado</th>
+      <th>Objetivo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accions.each do |accion| %>
+      <tr>
+        <td><%= accion.nombre %></td>
+        <td><%= accion.porcentaje_realizado %></td>
+        <td><%= accion.objetivo %></td>
+        <td><%= link_to 'Show', accion %></td>
+        <td><%= link_to 'Edit', edit_accion_path(accion) %></td>
+        <td><%= link_to 'Destroy', accion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Accion', new_accion_path %>
